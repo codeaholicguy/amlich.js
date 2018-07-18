@@ -13,6 +13,15 @@ computeDateToLunarDate(dd, mm, yy, timeZone)
 computeDateFromLunarDate(lunarDay, lunarMonth, lunarYear, lunarLeap, timeZone)
 ```
 
+Example:
+
+```js
+const {computeDateToLunarDate} = require('amlich.js')
+
+console.log(computeDateToLunarDate(18, 7, 2018, 7))
+// { lunarDay: 6, lunarMonth: 6, lunarYear: 2018, lunarLeap: false }
+```
+
 ### License
 
 [MIT](LICENSE)
