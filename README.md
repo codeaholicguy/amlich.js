@@ -1,4 +1,4 @@
-# amlich.js
+# amlich.js - [![Version](https://img.shields.io/npm/v/amlich.js.svg)](https://npmjs.org/package/amlich.js)
 
 A Vietnamese lunar calendar calculator library written in JavaScript.
 
