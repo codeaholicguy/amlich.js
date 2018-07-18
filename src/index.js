@@ -1,10 +1,3 @@
-/**
- * Astronomical algorithms from the book "Astronomical Algorithms" by Jean Meeus, 1998
- * Permission to use, copy, modify, and redistribute this software and its
- * documentation for personal, non-commercial use is hereby granted provided that
- * this copyright notice and appropriate documentation appears in all copies.
- */
-
 const {floor, sin, PI} = Math
 
 /**
@@ -40,7 +33,7 @@ const computeJulianDayFromDate = (dd, mm, yy) => {
 }
 
 /**
- * Convert a Julian day number to day/month/year.
+ * Computes date (day/month/year) from Julian day number.
  *
  * @param {Integer} jd
  *
@@ -75,7 +68,7 @@ const computeDateFromJulianDay = (jd) => {
 }
 
 /**
- * Compute the time of the k-th new moon after the new moon of 1/1/1900 13:52 UCT
+ * Computes the time of the k-th new moon after the new moon of 1/1/1900 13:52 UCT
  * (measured as the number of days since 1/1/4713 BC noon UCT, e.g., 2451545.125 is 1/1/2000 15:00 UTC).
  * Returns a floating number, e.g., 2415079.9758617813 for k=2 or 2414961.935157746 for k=-2
  * Algorithm from: "Astronomical Algorithms" by Jean Meeus, 1998
@@ -85,7 +78,7 @@ const computeDateFromJulianDay = (jd) => {
  * @return {Integer}
  */
 const computeNewMoon = (k) => {
-  const t = k / 1236.85 // Time in Julian centuries from 1900 January 0.5
+  const t = k / 1236.85 // Time in Julian centuries from 1900 January
   const t2 = t * t
   const t3 = t2 * t
   const dr = Math.PI / 180
@@ -131,7 +124,7 @@ const computeNewMoon = (k) => {
 }
 
 /**
- * Compute the longitude of the sun at any time.
+ * Computes the longitude of the sun by the Julian day number.
  * Algorithm from: "Astronomical Algorithms" by Jean Meeus, 1998
  *
  * @param {Float} jdn, the number of days since 1/1/4713 BC noon
@@ -159,7 +152,7 @@ const computeSunLongitude = (jdn) => {
 }
 
 /**
- * Compute sun position at midnight of the day with the given Julian day number.
+ * Computes sun position at midnight of the day with the given Julian day number.
  * The time zone if the time difference between local time and UTC: 7.0 for UTC+7:00.
  * The function returns a number between 0 and 11.
  * From the day after March equinox and the 1st major term after March equinox, 0 is returned.
@@ -175,7 +168,7 @@ const getSunLongitude = (dayNumber, timeZone) => {
 }
 
 /**
- * Compute the day of the k-th new moon in the given time zone.
+ * Computes the day of the k-th new moon in the given time zone.
  * The time zone if the time difference between local time and UTC: 7.0 for UTC+7:00
  *
  * @param {Integer} k, the k-th new moon after the new moon of 1/1/1900 13:52 UCT
@@ -187,7 +180,7 @@ const getNewMoonDay = (k, timeZone) => {
 }
 
 /**
- * Find the day that starts the luner month 11 of the given year for the given time zone
+ * Get the start of the lunar month 11 of the given year for the given time zone.
  *
  * @param {Integer} yy
  * @param {Integer} timeZone
@@ -205,6 +198,7 @@ const getLunarMonth11 = (yy, timeZone) => {
   if (sunLong >= 9) {
     nm = getNewMoonDay(k - 1, timeZone)
   }
+  
   return nm
 }
 
@@ -233,7 +227,7 @@ const getLeapMonthOffset = (a11, timeZone) => {
 }
 
 /**
- * Compute date dd/mm/yyyy to the corresponding lunar date
+ * Computes date (dd/mm/yyyy) to the corresponding lunar date.
  *
  * @param {Integer} dd
  * @param {Integer} mm
@@ -298,7 +292,7 @@ export const computeDateToLunarDate = (dd, mm, yy, timeZone) => {
 }
 
 /**
- * Compute a lunar date to the corresponding date
+ * Computes lunar date to the corresponding date (dd/mm/yy).
  *
  * @param {Integer} lunarDay
  * @param {Integer} lunarMonth
