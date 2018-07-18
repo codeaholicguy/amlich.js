@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Hoang Nhat Nguyen <hoangnn93@gmail.com>",
   "license": "MIT",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src",
