@@ -44,7 +44,7 @@ const computeJulianDayFromDate = (dd, mm, yy) => {
  *
  * @param {Integer} jd
  *
- * return {Date}
+ * @return {Date}
  */
 const computeDateFromJulianDay = (jd) => {
   let a, b, c
@@ -82,7 +82,7 @@ const computeDateFromJulianDay = (jd) => {
  *
  * @param {Integer} k, the k-th new moon after the new moon of 1/1/1900 13:52 UCT
  *
- * return {Integer}
+ * @return {Integer}
  */
 const computeNewMoon = (k) => {
   const t = k / 1236.85 // Time in Julian centuries from 1900 January 0.5
@@ -136,7 +136,7 @@ const computeNewMoon = (k) => {
  *
  * @param {Float} jdn, the number of days since 1/1/4713 BC noon
  *
- * return {Float}
+ * @return {Float}
  */
 const computeSunLongitude = (jdn) => {
   const t = (jdn - 2451545.0) / 36525 // Time in Julian centuries from 2000-01-01 12:00:00 GMT
@@ -168,7 +168,7 @@ const computeSunLongitude = (jdn) => {
  * @param {Integer} dayNumber
  * @param {Integer} timeZone
  *
- * return {Integer}
+ * @return {Integer}
  */
 const getSunLongitude = (dayNumber, timeZone) => {
   return floor((computeSunLongitude(dayNumber - 0.5 - timeZone / 24) / PI) * 6)
@@ -192,7 +192,7 @@ const getNewMoonDay = (k, timeZone) => {
  * @param {Integer} yy
  * @param {Integer} timeZone
  *
- * return {Integer}
+ * @return {Integer}
  */
 const getLunarMonth11 = (yy, timeZone) => {
   const off = computeJulianDayFromDate(31, 12, yy) - 2415021
@@ -214,7 +214,7 @@ const getLunarMonth11 = (yy, timeZone) => {
  * @param {Integer} a11
  * @param {Integer} timeZone
  *
- * return {Integer}
+ * @return {Integer}
  */
 const getLeapMonthOffset = (a11, timeZone) => {
   const k = floor((a11 - 2415021.076998695) / 29.530588853 + 0.5)
@@ -240,7 +240,7 @@ const getLeapMonthOffset = (a11, timeZone) => {
  * @param {Integer} yy
  * @param {Integer} timeZone
  *
- * return {}
+ * @return {}
  */
 export const computeDateToLunarDate = (dd, mm, yy, timeZone) => {
   const dayNumber = computeJulianDayFromDate(dd, mm, yy)
@@ -305,6 +305,8 @@ export const computeDateToLunarDate = (dd, mm, yy, timeZone) => {
  * @param {Integer} lunarYear
  * @param {Boolean} lunarLeap
  * @param {Integer} timeZone
+ *
+ * @return {}
  */
 export const computeDateFromLunarDate = (
   lunarDay,
