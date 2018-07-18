@@ -1,0 +1,16 @@
+{
+  "extends": ["standard", "eslint:recommended"],
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "__filename": true,
+    "process": true,
+    "require": true
+  },
+  "rules": {
+    "space-before-function-paren": ["off"]
+  }
+}
