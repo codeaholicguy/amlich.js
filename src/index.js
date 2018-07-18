@@ -180,7 +180,7 @@ const getNewMoonDay = (k, timeZone) => {
 }
 
 /**
- * Get the start of the lunar month 11 of the given year for the given time zone.
+ * Finds the start day of the lunar month 11 of the given year for the given time zone.
  *
  * @param {Integer} yy
  * @param {Integer} timeZone
@@ -203,7 +203,7 @@ const getLunarMonth11 = (yy, timeZone) => {
 }
 
 /**
- * Find the index of the leap month after the month starting on the day a11.
+ * Finds the index of the leap month after the month starting on the day a11.
  *
  * @param {Integer} a11
  * @param {Integer} timeZone
