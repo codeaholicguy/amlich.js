@@ -4,6 +4,8 @@
 
 A Vietnamese lunar calendar calculator library written in JavaScript.
 
+Another version which is written in Haskell https://github.com/codeaholicguy/halunar.
+
 ### Usage
 
 ```js
