@@ -16,7 +16,7 @@ const {floor, sin, PI} = Math
  * @param {Integer} mm
  * @param {Integer} yy
  *
- * return {Integer}
+ * @return {Integer}
  */
 const computeJulianDayFromDate = (dd, mm, yy) => {
   const a = floor((14 - mm) / 12)
