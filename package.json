@@ -1,11 +1,10 @@
 {
   "name": "amlich.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Vietnamese moon calendar calculator by JavaScript",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Hoang Nhat Nguyen <hoangnn93@gmail.com>",
   "license": "MIT",
-  "main": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src",
