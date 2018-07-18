@@ -1,6 +1,6 @@
 # amlich.js
 
-A Vietnamese lunar calendar calculator library written in Haskell.
+A Vietnamese lunar calendar calculator library written in JavaScript.
 
 ### Usage
 
